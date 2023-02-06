@@ -1,3 +1,3 @@
-module github.com/traefik/plugindemo
+module traefik-service-auth
 
-go 1.19
+go 1.18

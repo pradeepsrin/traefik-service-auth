@@ -1,12 +1,17 @@
-displayName: Demo Plugin
+displayName: Service Auth Plugin
 type: middleware
 iconPath: .assets/icon.png
 
-import: github.com/traefik/plugindemo
+import: github.com/pradeepsrin/traefik-service-auth
 
-summary: '[Demo] Add Request Header'
+summary: 'Service Basic Auth'
 
 testData:
-  Headers:
-    X-Demo: test
-    X-URL: '{{URL}}'
+  client_header_key: "X-Client-Id"
+  secrets:
+    service1 :
+      - password1
+      - password2
+    service2 :
+      - password3
+      - password4 #could be from secret management
